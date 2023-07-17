@@ -1,0 +1,164 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Comic sans ms';
+}
+
+.container {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: url(./images/img.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: filter 0.7s ease-in-out;
+}
+
+.container h1 {
+   font-size: 3.5rem;
+   color: #000;
+   font-weight: 600;
+   -webkit-text-stroke: 2px white;
+}
+
+.container .btn {
+   margin-top: 0.6em;
+   font-size: 1.5rem;
+   padding: 0.3em 0.6em;
+   background-color: rgb(255, 196, 85);
+   font-weight: 600;
+   border-radius: 0.3em;
+   border: none;
+   cursor: pointer;
+}
+
+.container .btn:hover {
+   filter: brightness(0.9);
+}
+
+.active.container {
+   filter: blur(10px);
+}
+
+.popUp {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: url("https://images.unsplash.com/photo-1661961110144-12ac85918e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 30%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   padding: 1.8em;
+   border-radius: 0.5em;
+   gap: 1em;
+   opacity: 1;
+   transition: all 0.6s ease-in-out;
+}
+
+.popUp h1 {
+   color: yellow;
+}
+
+.popUp label {
+   font-size: 1.5rem;
+   color: #fff;
+}
+
+.popUp .mail {
+   font-size: 1.3rem;
+   padding: 0.2em 0 0.2em 0.5em;
+   border: none;
+}
+
+.popUp .mail:focus {
+   outline: none;
+}
+
+.popUp .popUpBtn {
+   font-size: 1.3em;
+   padding: 0.2em 0;
+   font-weight: 600;
+   cursor: pointer;
+   background-color: lightpink;
+   border: none;
+}
+
+.popUp .popUpBtn:hover {
+   filter: brightness(0.9);
+}
+
+.popUp .close {
+   position: absolute;
+   left: 92%;
+}
+
+.popUp .close .closePop {
+   color: #fff;
+}
+
+.popUp .close .closePop:hover {
+   color: orange;
+   cursor: pointer;
+}
+
+.active.popUp {
+   visibility: hidden;
+   opacity: 0;
+   top: 10%;
+}
+
+@media (max-width: 786px) {
+   .container h1 {
+      font-size: 2rem;
+      -webkit-text-stroke: 0px white;
+   }
+   .popUp {
+      width: 350px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      border-radius: 0.5em;
+      gap: 0.7em;
+   }
+
+   .popUp h1 {
+      font-size: 20px;
+   }
+
+   .popUp label {
+      font-size: 1rem;
+   }
+
+   .popUp .mail {
+      font-size: 1rem;
+      padding: 0.2em 0 0.2em 0.5em;
+   }
+
+   .popUp .popUpBtn {
+      font-size: 1em;
+   }
+
+   .popUp .popUpBtn:hover {
+      filter: brightness(0.9);
+   }
+
+   .popUp .close {
+      position: absolute;
+      left: 92%;
+      top:3%;
+   }
+
+   .popUp .close .closePop {
+      font-size: 1.3rem;
+   }
+}
